@@ -1,0 +1,24 @@
+---
+layout: base.njk
+title: "Bacheca avvisi"
+eyebrow: "News"
+permalink: /news/
+eleventyExcludeFromCollections: true
+description: "Avvisi e comunicazioni ufficiali della Salvation Junior-Senior High School."
+headerAction:
+  href: "/feed.xml"
+  icon: "fa-square-rss"
+  label: "Segui via RSS"
+---
+
+<p>Comunicazioni ufficiali della scuola: risultati sportivi, avvisi organizzativi, riconoscimenti e appuntamenti.</p>
+
+<ul class="news-list">
+  {% for item in collections.news %}
+  <li>
+    <span class="news-date">{{ item.data.date | readableDate }}</span>
+    <span class="news-cat">{{ item.data.category }}</span>
+    <a href="{{ item.url }}">{{ item.data.title }}</a>
+  </li>
+  {% endfor %}
+</ul>

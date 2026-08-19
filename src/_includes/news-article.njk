@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ title }} | {{ school.shortName }} News</title>
+  <link rel="icon" type="image/svg+xml" href="/img/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="/css/school.css?v=1">
+  <link rel="alternate" type="application/rss+xml" title="{{ metadata.title }}" href="/feed.xml">
+</head>
+<body>
+
+  <div class="pre-header">
+    <div class="pre-header-inner">
+      <span><i class="fa-solid fa-location-dot"></i> {{ school.address }}</span>
+      <span class="dim">&middot;</span>
+      <span><i class="fa-solid fa-phone"></i> {{ school.phone }}</span>
+      <span class="dim">&middot;</span>
+      <span>{{ school.officeHours }}</span>
+      <a class="pre-header-alert" href="/students-families/chiusure-ritardi/"><i class="fa-solid fa-triangle-exclamation"></i> Chiusure e ritardi</a>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="site-title" href="/">
+        <span class="crest"><i class="fa-solid fa-tree"></i></span>
+        <span class="titles">
+          <span class="name">{{ school.shortName }}</span>
+          <span class="subname">Junior-Senior High School &middot; Est. {{ school.founded }}</span>
+        </span>
+      </a>
+      <button class="nav-toggle" aria-label="Apri il menu" aria-expanded="false">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      <nav class="site-nav">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li class="has-dropdown">
+            <a href="/about/">Chi siamo</a>
+            <ul class="dropdown">
+              <li><a href="/about/">La nostra storia</a></li>
+              <li><a href="/about/staff/">Staff e amministrazione</a></li>
+            </ul>
+          </li>
+          <li class="has-dropdown">
+            <a href="/academics/">Programmi</a>
+            <ul class="dropdown">
+              <li><a href="/academics/">Materie e dipartimenti</a></li>
+              <li><a href="/academics/vocational/">Percorsi vocazionali</a></li>
+            </ul>
+          </li>
+          <li class="has-dropdown">
+            <a href="/athletics/">Atletica</a>
+            <ul class="dropdown">
+              <li><a href="/athletics/">Tutti gli sport</a></li>
+              <li><a href="/athletics/football/">Salvation Bucks Football</a></li>
+            </ul>
+          </li>
+          <li><a href="/activities/">Attività e Club</a></li>
+          <li><a href="/library/">Biblioteca</a></li>
+          <li class="has-dropdown">
+            <a href="/students-families/">Studenti e Famiglie</a>
+            <ul class="dropdown">
+              <li><a href="/students-families/">Panoramica</a></li>
+              <li><a href="/students-families/calendario/">Calendario e orari</a></li>
+              <li><a href="/students-families/chiusure-ritardi/">Chiusure e ritardi</a></li>
+              <li><a href="/students-families/mensa/">Mensa</a></li>
+              <li><a href="/students-families/trasporti-e-salute/">Trasporti e salute</a></li>
+              <li><a href="/students-families/regolamento/">Regolamento</a></li>
+            </ul>
+          </li>
+          <li><a href="/news/" class="active">News</a></li>
+          <li><a href="/contact/">Contatti</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main-content main-content-article">
+    <a class="crumb" href="/news/"><i class="fa-solid fa-arrow-left"></i>Torna alla bacheca avvisi</a>
+    {% if category %}<p class="eyebrow">{{ category }}</p>{% endif %}
+    <h1>{{ title }}</h1>
+    <p class="article-meta">{{ date | readableDate }}{% if author %} &middot; {{ author }}{% endif %}</p>
+    <div class="article-body">
+      {{ content | safe }}
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-top">
+      <div class="footer-inner">
+        <div class="footer-col footer-col-brand">
+          <div class="fname">{{ school.name }}</div>
+          <p>{{ school.address }}</p>
+          <p>{{ school.phone }} &middot; {{ school.email }}</p>
+        </div>
+        <div class="footer-col">
+          <h5>Orientarsi</h5>
+          <ul>
+            <li><a href="/about/">Chi siamo</a></li>
+            <li><a href="/academics/">Programmi</a></li>
+            <li><a href="/athletics/">Atletica</a></li>
+            <li><a href="/library/">Biblioteca</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Studenti e famiglie</h5>
+          <ul>
+            <li><a href="/students-families/calendario/">Calendario</a></li>
+            <li><a href="/students-families/chiusure-ritardi/">Chiusure e ritardi</a></li>
+            <li><a href="/students-families/mensa/">Mensa</a></li>
+            <li><a href="/students-families/regolamento/">Regolamento</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Istituzione</h5>
+          <ul>
+            <li>Preside: {{ school.principal }}</li>
+            <li>Vicepreside: {{ school.vicePrincipal }}</li>
+            <li><a href="/contact/">Contatti e indicazioni</a></li>
+            <li><a href="/news/">Bacheca avvisi</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; {{ metadata.siteLaunchYear }}&ndash;{{ currentYear }} {{ school.name }} &middot; Salvation City Schools. Sito amministrativo. &middot; <a href="/contact/#non-discriminazione">Avviso di non discriminazione</a>
+    </div>
+  </footer>
+
+  <script src="/js/site.js?v=1" defer></script>
+</body>
+</html>

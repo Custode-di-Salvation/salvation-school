@@ -1,0 +1,131 @@
+---
+layout: base.njk
+permalink: /
+title: "Home"
+isHome: true
+eleventyExcludeFromCollections: true
+---
+<section class="hero">
+  <div class="hero-slide active" style="background-image:url('https://i.imgur.com/9hipxIq.jpeg')"></div>
+  <div class="hero-slide" style="background-image:url('https://i.imgur.com/unrEyBt.jpeg')"></div>
+  <div class="hero-slide" style="background-image:url('https://i.imgur.com/GUpNBaO.jpeg')"></div>
+  <div class="hero-slide" style="background-image:url('https://i.imgur.com/KAOdHyM.jpeg')"></div>
+  <div class="hero-content">
+    <p class="hero-kicker">Salvation, West Virginia &middot; The Terrace</p>
+    <h1>{{ school.name }}</h1>
+    <p>L'unico istituto scolastico della città, dalla sesta alla dodicesima classe. Casa dei Salvation Bucks dal {{ school.founded }}.</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="/about/">Scopri la scuola</a>
+      <a class="btn btn-outline" href="/students-families/chiusure-ritardi/">Chiusure e ritardi</a>
+    </div>
+  </div>
+</section>
+
+<section class="home-section">
+  <div class="home-section-head">
+    <h2>Collegamenti rapidi</h2>
+  </div>
+  <div class="quicklinks">
+    <a class="quicklink" href="/students-families/chiusure-ritardi/">
+      <i class="fa-solid fa-triangle-exclamation"></i>
+      <div>
+        <h4>Chiusure e ritardi</h4>
+        <p>Stato delle lezioni in caso di neve o maltempo</p>
+      </div>
+    </a>
+    <a class="quicklink" href="/students-families/calendario/">
+      <i class="fa-solid fa-calendar-days"></i>
+      <div>
+        <h4>Calendario {{ school.schoolYear }}</h4>
+        <p>Orari, vacanze e date importanti</p>
+      </div>
+    </a>
+    <a class="quicklink" href="/students-families/mensa/">
+      <i class="fa-solid fa-utensils"></i>
+      <div>
+        <h4>Menù mensa</h4>
+        <p>Il menù settimanale della cafeteria</p>
+      </div>
+    </a>
+    <a class="quicklink" href="/about/staff/">
+      <i class="fa-solid fa-address-book"></i>
+      <div>
+        <h4>Staff Directory</h4>
+        <p>Contatti di insegnanti e uffici</p>
+      </div>
+    </a>
+    <a class="quicklink" href="/library/">
+      <i class="fa-solid fa-book"></i>
+      <div>
+        <h4>Salvation Public Library</h4>
+        <p>Orari scolastici e pubblici</p>
+      </div>
+    </a>
+    <a class="quicklink" href="/athletics/football/">
+      <i class="fa-solid fa-football"></i>
+      <div>
+        <h4>Salvation Bucks Football</h4>
+        <p>Calendario partite e Friday Night Lights</p>
+      </div>
+    </a>
+  </div>
+</section>
+
+<section class="home-section tinted">
+  <div class="home-section-head">
+    <h2>Bacheca avvisi</h2>
+    <a class="see-all" href="/news/">Tutti gli avvisi &rarr;</a>
+  </div>
+  <ul class="news-list">
+    {% for item in collections.news %}
+      {% if loop.index <= 5 %}
+      <li>
+        <span class="news-date">{{ item.data.date | readableDate }}</span>
+        <span class="news-cat">{{ item.data.category }}</span>
+        <a href="{{ item.url }}">{{ item.data.title }}</a>
+      </li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+</section>
+
+<section class="spotlight spotlight-dark" style="background-image:url('https://i.imgur.com/bJIwHae.jpeg')">
+  <div class="spotlight-inner">
+    <p class="eyebrow">Friday Night Lights</p>
+    <h2>I Salvation Bucks</h2>
+    <p>Ogni venerdì sera d'autunno, quando i Bucks giocano in casa, tutta Salvation converge al campo sopra The Terrace. Una tradizione che dura dal 1927, tra le più sentite della città.</p>
+    <a class="btn btn-primary" href="/athletics/football/">Squadra, calendario e storia &rarr;</a>
+  </div>
+</section>
+
+<section class="home-section">
+  <div class="home-section-head">
+    <h2>La scuola</h2>
+  </div>
+  <div class="card-grid">
+    <a class="content-card" href="/about/">
+      <div class="thumb" style="background-image:url('https://i.imgur.com/mxlCGco.jpeg')"></div>
+      <div class="body">
+        <h4>Chi siamo</h4>
+        <p>Storia, missione e tradizioni della scuola dal 1889 a oggi.</p>
+        <span class="go">Scopri di più &rarr;</span>
+      </div>
+    </a>
+    <a class="content-card" href="/academics/">
+      <div class="thumb" style="background-image:url('https://i.imgur.com/QZIcD4n.jpeg')"></div>
+      <div class="body">
+        <h4>Programmi accademici</h4>
+        <p>Dipartimenti, laboratori scientifici e percorsi vocazionali.</p>
+        <span class="go">Scopri di più &rarr;</span>
+      </div>
+    </a>
+    <a class="content-card" href="/library/">
+      <div class="thumb" style="background-image:url('https://i.imgur.com/9xoaVmR.png')"></div>
+      <div class="body">
+        <h4>Salvation Public Library</h4>
+        <p>Biblioteca scolastica e comunale, nell'ala nord-ovest del complesso.</p>
+        <span class="go">Scopri di più &rarr;</span>
+      </div>
+    </a>
+  </div>
+</section>

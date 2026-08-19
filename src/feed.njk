@@ -1,0 +1,27 @@
+---
+permalink: /feed.xml
+eleventyExcludeFromCollections: true
+eleventyComputed:
+  baseHref: "{{ metadata.url }}/"
+---
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+  <title>{{ metadata.title }}</title>
+  <link>{{ metadata.url }}/news/</link>
+  <atom:link href="{{ metadata.feedUrl }}" rel="self" type="application/rss+xml" />
+  <description>{{ metadata.subtitle }}</description>
+  <language>{{ metadata.language }}</language>
+  <lastBuildDate>{{ collections.news | getNewestCollectionItemDate | dateToRfc822 }}</lastBuildDate>
+  {%- for post in collections.news %}
+  <item>
+    <title>{{ post.data.title }}</title>
+    <link>{{ post.url | htmlBaseUrl(metadata.url) }}</link>
+    <guid>{{ post.url | htmlBaseUrl(metadata.url) }}</guid>
+    <category>{{ post.data.category }}</category>
+    <pubDate>{{ post.date | dateToRfc822 }}</pubDate>
+    <description><![CDATA[{{ post.templateContent | transformWithHtmlBase(metadata.url) | safe }}]]></description>
+  </item>
+  {%- endfor %}
+</channel>
+</rss>
