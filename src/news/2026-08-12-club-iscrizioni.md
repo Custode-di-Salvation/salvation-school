@@ -8,4 +8,4 @@ author: "Student Council"
 
 Come ogni anno, le iscrizioni ai club studenteschi si apriranno il **24 agosto**, primo giorno di lezione, e resteranno aperte per le prime due settimane di scuola.
 
-Drama Club, Coro e Banda scolastica, The Buck Bulletin, Club Scientifico, Student Council e FFA terranno un banchetto informativo nell'atrio principale durante la pausa pranzo di lunedì 24 e martedì 25 agosto. Gli studenti interessati possono anche rivolgersi direttamente ai referenti indicati nella pagina [Attività e Club](/activities/).
+Drama Club, Coro e Banda scolastica, The Buck Bulletin, Club Scientifico, Student Council, FFA e Club dell'Occulto terranno un banchetto informativo nell'atrio principale durante la pausa pranzo di lunedì 24 e martedì 25 agosto. Gli studenti interessati possono anche rivolgersi direttamente ai referenti indicati nella pagina [Attività e Club](/activities/).

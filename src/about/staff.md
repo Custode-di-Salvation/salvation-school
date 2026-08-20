@@ -55,7 +55,7 @@ Per contattare un membro dello staff durante l'orario scolastico, telefona alla 
 <ul class="staff-list">
   <li class="staff-row"><span class="who">{{ school.principal }}</span><span class="role">Coordinatore di dipartimento &middot; Public Speaking &amp; Debate e US History</span></li>
   <li class="staff-row"><span class="who">James Redding</span><span class="role">Civics &amp; Middle School History</span></li>
-  <li class="staff-row"><span class="who">Edmund B. Whitaker</span><span class="role">Social Studies</span></li>
+  <li class="staff-row"><span class="who">Edmund B. Whitaker</span><span class="role">Social Studies &middot; referente Club dell'Occulto</span></li>
   <li class="staff-row"><span class="who">Malika L. Wallace</span><span class="role">Archaeology &amp; Historic Preservation</span></li>
 </ul>
 </div>

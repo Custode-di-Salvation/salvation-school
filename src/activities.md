@@ -57,6 +57,14 @@ Oltre alle materie curricolari e ai programmi sportivi, la scuola offre diversi 
     </div>
     <span class="card-link-arrow"><i class="fa-solid fa-arrow-right"></i></span>
   </a>
+  <div class="content-card dept-card">
+    <div class="body">
+      <div class="card-icon forest"><i class="fa-solid fa-moon"></i></div>
+      <h4>Club dell'Occulto</h4>
+      <p>Si ritrova ogni venerdì pomeriggio per parlare di folklore locale, tarocchi e storie di fantasmi, con la tradizionale Notte delle Storie ad ottobre.</p>
+      <div class="dept-referent"><i class="fa-solid fa-user"></i><span class="label">Referente</span><span class="names">Edmund B. Whitaker</span></div>
+    </div>
+  </div>
 </div>
 
 <div class="alert-box">
