@@ -758,3 +758,34 @@ table.data-table tr:nth-child(even) td { background: var(--off-white); }
   .pre-header-alert { margin-left: 0; }
   .main-content > h1 { font-size: 2rem; }
 }
+
+/* Progetto Radici e Reperti: indice e tabelle consultabili anche da mobile. */
+.project-index { margin: 1.2em 0 2em; }
+.project-index .tag { text-decoration: none; }
+.project-index .tag:hover { background: var(--forest); color: var(--white); }
+.school-project h2 { scroll-margin-top: 7em; }
+.project-table-wrap {
+  max-width: 100%;
+  overflow-x: auto;
+  margin: 1.6em 0;
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+}
+.project-table-wrap:focus-visible { outline: 2px solid var(--forest); outline-offset: 3px; }
+table.project-table { min-width: 660px; margin: 0; }
+table.project-table th, table.project-table td { vertical-align: top; }
+table.project-table tbody th[scope="row"] {
+  background: var(--off-white);
+  color: var(--forest-deep);
+  font-family: var(--font-sans);
+  font-size: inherit;
+}
+table.project-calendar { min-width: 800px; }
+.project-calendar th:first-child { width: 12%; white-space: nowrap; }
+.project-calendar th:nth-child(2) { width: 10%; }
+.project-calendar th:nth-child(3) { width: 40%; }
+table.project-calendar .calendar-month th {
+  background: var(--forest-tint);
+  color: var(--forest-deep);
+  white-space: normal;
+}

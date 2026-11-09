@@ -5,6 +5,11 @@ eyebrow: "Vita scolastica"
 description: "Club studenteschi e attività extra-curriculari della Salvation Junior-Senior High School."
 ---
 
+<div class="alert-box">
+  <h3><a href="/activities/radici-e-reperti/">Radici e Reperti: recuperare il sepolto</a></h3>
+  <p>Gli incontri si tengono il martedì pomeriggio, ogni due settimane, presso il Salvation Museum of History &amp; Natural Sciences e nei locali della scuola. La partecipazione è aperta a tutti gli studenti di scuola media e superiore; non sono richieste competenze pregresse, solo curiosità.</p>
+</div>
+
 Oltre alle materie curricolari e ai programmi sportivi, la scuola offre diversi club studenteschi che si riuniscono nel pomeriggio dopo le lezioni. La partecipazione è libera e gratuita; ogni club è coordinato da un insegnante di riferimento.
 
 <div class="card-grid">
